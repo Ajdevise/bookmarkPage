@@ -19,6 +19,7 @@
     &__heading{
         font-weight: 400;
         font-size: rem(15px);
+        text-align: left;
     }
 
     &__answer{
@@ -37,6 +38,7 @@
     
     svg{
         transition: all .2s; 
+        min-width: 1rem;
     }
 
     &__item.active{
