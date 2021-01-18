@@ -40,6 +40,7 @@ body {
   font-size: 1.125rem;
   margin: 0;
   line-height: 1.3;
+  position: relative;
 }
 
 ul {
@@ -96,6 +97,10 @@ section:not(.join):not(:last-child) {
 
 .wrapper-center {
   margin: 0 auto;
+}
+
+.oy-hidden {
+  overflow-y: hidden;
 }
 
 h1 {
@@ -658,6 +663,7 @@ span {
 .accordion__heading {
   font-weight: 400;
   font-size: 0.9375rem;
+  text-align: left;
 }
 
 .accordion__answer {
@@ -678,6 +684,7 @@ span {
 .accordion svg {
   -webkit-transition: all .2s;
   transition: all .2s;
+  min-width: 1rem;
 }
 
 .accordion__item.active svg {
