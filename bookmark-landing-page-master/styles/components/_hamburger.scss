@@ -1,0 +1,42 @@
+.hamburger{
+    cursor: pointer;
+
+    &.open{
+        position: relative;
+        z-index: 100000000;
+    }
+
+    &__line{
+        display: block;
+        height: rem(3px);
+        width: rem(25px);
+        background-color: $very-dark-blue;
+        transition: all .2s linear; 
+        transform-origin: top right;
+
+        &:not(:last-child){
+            margin-bottom: rem(5px);
+        }
+
+        &--3{
+            transform-origin: top right 0;
+        }
+    }
+
+    &.open &__line{
+        background-color: $white;
+
+        &--1{
+            transform: rotate(-45deg);
+        }
+
+        &--2{
+            opacity: 0;
+            transform: translateX(rem(-15px));
+        }
+
+        &--3{
+            transform: rotate(45deg) translateX(3px);
+        }
+    }
+}

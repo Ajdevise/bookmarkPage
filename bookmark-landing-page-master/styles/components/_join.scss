@@ -1,0 +1,93 @@
+.join{
+    background-color: $soft-blue;
+
+    &__content{
+        text-align: center;
+        padding-top: rem(45px);
+        padding-bottom: rem(30px);
+        width: 100%;
+        max-width: rem(400px); 
+        margin: 0 auto;
+        
+    }
+
+    &__amount{
+        color: lighten($grayish-blue, 55%);
+        letter-spacing: rem(5px);
+        margin-bottom: 0;
+        font-size: rem(14px);
+    }
+
+    &__heading{
+        color: $white;
+        margin: rem(15px) 0 rem(30px) 0;
+        font-size: rem(23px);
+    }
+
+    &__form{
+
+        button{
+            width: 100%;
+            margin-top: rem(10px);
+            transform: translateY(-15px);
+        }
+
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: 70% 30%;
+            column-gap: rem(20px);
+            
+            button{
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;  
+                margin-top: 0;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__error{
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .2s;
+        color: $white;
+        padding: rem(5px) rem(8px);
+        background-color: $soft-red; 
+        width: 100%;
+        text-align: left;
+        border-radius: 0 0 5px 5px;
+        margin-top: -5px;
+    }
+
+    &__input:invalid + &__error{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__input:invalid ~ button{
+        transform: translateY(0);
+    }
+
+    &__input{
+        width: 100%;
+        padding: rem(15px);
+        font-family: inherit;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        position: relative;
+        z-index: 200;
+        
+        @include breakpoint-up(large){
+            margin-right: rem(15px);
+        }
+
+        &:invalid{
+            border: 2px solid $soft-red;
+            box-shadow: none;
+            background-image: url("/images/icon-error.svg");
+            background-repeat: no-repeat;
+            background-position: top 50% right rem(10px);
+        }
+    }
+}

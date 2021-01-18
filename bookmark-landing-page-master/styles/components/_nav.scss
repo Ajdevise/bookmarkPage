@@ -1,0 +1,103 @@
+.nav{
+    $padding: rem(45px);
+    display: flex;
+    align-items: center;
+    padding-top: $padding; 
+    padding-bottom: $padding;
+    margin-bottom: rem(35px);
+
+    &.open &__logo{
+        position: relative;
+        z-index: 22;
+
+        > g > path,
+        > g > g > circle{
+            fill: $white;
+        }
+
+        > g > g > path{
+            fill: $very-dark-blue;
+        }
+    }
+
+    &__link,
+    &__link:visited{
+        color: $very-dark-blue;
+        text-transform: uppercase;
+        margin-right: rem(50px);
+        transition: all .2s;
+
+        &:hover{
+            color: $soft-red;
+        }
+    }
+
+    &__links{
+        > .cta{
+            padding-left: rem(30px);
+            padding-right: rem(30px);
+        }
+    }
+    
+
+    &__logoContainer{
+        margin-right: auto; 
+    }
+
+    &__menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($very-dark-blue, .9);
+        padding-top: rem(95px);
+        text-align: center;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all .4s;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: $padding;
+
+        &.open{
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .cta{
+            display: block;
+
+        }
+
+        ul:first-child{
+            margin-bottom: auto;
+        }
+    }
+
+    &__menuLink,
+    &__menuLink:visited
+    {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        
+    }
+
+    &__menuItem{
+        padding: rem(30px) 0;
+        border-top: 1px solid rgba($grayish-blue, .25);
+    }
+
+    &__menuSocialsContainer{
+
+        li{
+            display: inline-block;
+            
+            &:last-child{
+                margin-left: rem(28px);
+            }
+        }
+    }
+}

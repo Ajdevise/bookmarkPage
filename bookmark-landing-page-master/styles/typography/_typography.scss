@@ -1,0 +1,42 @@
+h1 {
+  color: $very-dark-blue;
+  font-size: rem(28px);
+  font-weight: 500;
+
+  @include breakpoint-up(medium) {
+    font-size: rem(44px);
+    margin-bottom: 0;
+  }
+}
+
+h2, 
+h3 {
+  color: $very-dark-blue;
+  font-size: rem(25px);
+  font-weight: 500;
+
+  @include breakpoint-up(medium) {
+    font-size: rem(34px);
+  }
+}
+
+h2{
+  @include breakpoint-up(medium) {
+    margin-bottom: 0;
+  }
+}
+
+p {
+  color: $grayish-blue;
+  line-height: 1.6;
+  font-size: rem(16px);
+}
+
+span{
+  color: $grayish-blue;
+  font-size: rem(14px);
+
+  @include breakpoint-up(large){
+    font-size: rem(16px);
+  }
+}

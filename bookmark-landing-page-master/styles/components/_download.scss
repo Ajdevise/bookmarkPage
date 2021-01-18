@@ -1,0 +1,16 @@
+.download{
+    text-align: center;
+
+    &__cards{
+        margin-top: rem(50px);
+
+        @include breakpoint-up(large){
+            display: grid;
+            grid-template-columns: repeat(3, rem(300px));
+            grid-gap: rem(50px);
+            justify-content: center;
+            margin-bottom: rem(200px);
+            margin-top: rem(70px);
+        }
+    }
+}

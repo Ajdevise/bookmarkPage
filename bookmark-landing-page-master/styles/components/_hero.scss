@@ -1,0 +1,27 @@
+.hero{
+
+    &__header{
+        text-align: center;
+
+        @include breakpoint-up(large){
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            text-align: left;
+            margin-top: rem(15px); 
+        }
+
+        p{
+            margin: rem(20px) 0 rem(25px) 0;
+        }
+
+        .cta--white{
+            margin-left: rem(15px);
+        }
+    }
+
+    @include breakpoint-up(large){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: rem(100px);
+    }
+}

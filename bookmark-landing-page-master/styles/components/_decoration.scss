@@ -1,0 +1,49 @@
+.decoration{
+    position: relative;
+    margin-top: rem(20px);
+    margin-bottom: rem(90px);
+    z-index: -1;
+    text-align: center;
+
+    &::before{
+        content: "";
+        width: 80%;
+        position: absolute;
+        height: 80%;
+        background-color: $soft-blue;
+        bottom: rem(-25px);
+        z-index: -1;
+        
+        @include breakpoint-up(large){
+            width: 200%;
+        }
+    }
+    
+    &__image{
+        width: 100%;
+        object-fit: cover;
+        max-width: rem(600px);
+    }
+
+    &--left{
+        &::before{
+            left: 0;
+            margin-left: rem(-30px);
+            @include breakpoint-up(large){
+                margin-left: -120%;
+            }
+            border-radius: 0 5rem 5rem 0;
+        }
+    }
+
+    &--right{
+        &::before{
+            right: 0;
+            margin-right: rem(-30px);
+            @include breakpoint-up(large){
+                margin-right: -120%;
+            }
+            border-radius: 5rem 0 0 5rem;
+        }
+    }
+}

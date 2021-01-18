@@ -1,0 +1,41 @@
+.container{
+    width: 100%;
+    max-width: rem(1340px);
+    padding: 0 rem(30px);
+    margin: 0 auto;
+}
+
+.hide-for-mobile{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.wrapper-center,
+.wrapper{
+    width: 100%;
+    max-width: rem(500px);
+}
+
+
+.wrapper-center{
+    margin: 0 auto;
+}
+
+.oy-hidden{
+    overflow-y: hidden;
+}

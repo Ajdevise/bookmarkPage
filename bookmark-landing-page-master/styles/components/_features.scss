@@ -1,0 +1,12 @@
+.features{
+    margin-top: rem(150px);
+    text-align: center; 
+
+    p{
+        margin-bottom: rem(60px);
+
+        @include breakpoint-up(large){
+            margin-bottom: rem(30px);
+        }
+    }
+}

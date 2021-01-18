@@ -1,0 +1,49 @@
+.cta{
+    color: $white;
+    font-family: inherit;
+    padding: rem(15px) rem(15px);
+    font-size: rem(13px);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: rem(7px);
+    border: none;
+    box-shadow: 0px 0px 8px rgba(#000, .15); 
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .2s;
+
+    &--empty{
+        background: none;
+        border: 1px solid $white;
+    }
+
+    &--red{
+        background: $soft-red;
+
+        &:hover{
+            background: transparent;
+            border: 1px solid $soft-red;
+            color: $soft-red;
+        }
+    }
+
+    &--blue{
+        background: $soft-blue;
+        
+        &:hover{
+            background: transparent;
+            border: 1px solid $soft-blue;
+            color: $soft-blue;
+        }
+    }
+
+    &--white{
+        background: lighten($grayish-blue, 37%);
+        color: darken($grayish-blue, 25%);
+
+        &:hover{
+            background: transparent;
+            border: 1px solid lighten($grayish-blue, 37%);
+        }
+    }
+}
